@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="library" type="libraryType">
+
+<xs:key name="branchKey">
+      <xs:selector xpath = "branch"/>
+      <xs:field xpath = "branchID "/>
+</xs:key>
+
+<xs:keyref name="EmployeeFKey" refer="branchKey">
+      <xs:selector xpath = "Employee"/>
+      <xs:field xpath = "branchID"/>
+</xs:keyref>
+
+<xs:keyref name="CustomerFKey" refer="branchKey">
+      <xs:selector xpath = "Customer"/> 
+      <xs:field xpath = "branchID"/>
+</xs:keyref>
+
+<xs:key name="empKey">
+      <xs:selector xpath = "Employee"/>
+      <xs:field xpath = "empID "/>
+</xs:key>
+
+<xs:keyref name="DevicesFKey" refer="empKey">
+      <xs:selector xpath = "Devices"/>
+      <xs:field xpath = "empID"/>
+</xs:keyref>
+
+<xs:keyref name="BooksFKey" refer="empKey">
+      <xs:selector xpath = "Books"/>
+      <xs:field xpath = "empID"/>
+</xs:keyref>
+
+<xs:keyref name="EmpRegistCusFKey" refer="empKey">
+      <xs:selector xpath = "EmployeeRegistersCustomer"/>
+      <xs:field xpath = "empID"/>
+</xs:keyref>
+
+<xs:keyref name="EmpUpdatIssuStatFKey" refer="empKey">
+      <xs:selector xpath = "EmployeeUpdatesIssueStatus"/>
+      <xs:field xpath = "empID"/>
+</xs:keyref>
+
+<xs:keyref name="EmpUpdatReturnStatFKey" refer="empKey">
+      <xs:selector xpath = "EmployeeUpdatesReturnStatus"/>
+      <xs:field xpath = "empID"/>
+</xs:keyref>
+
+<xs:key name="cusKey">
+      <xs:selector xpath = "Customer"/>
+      <xs:field xpath = "cusID "/>
+</xs:key>
+
+<xs:keyref name="DevicesFKey2" refer="cusKey">
+      <xs:selector xpath = "Devices"/>
+      <xs:field xpath = "cusID"/>
+</xs:keyref>
+
+<xs:keyref name="BooksFKey2" refer="cusKey">
+      <xs:selector xpath = "Books"/>
+      <xs:field xpath = "cusID"/>
+</xs:keyref>
+
+<xs:keyref name="EmpRegistCusFKey2" refer="cusKey">
+      <xs:selector xpath = "EmployeeRegistersCustomer"/>
+      <xs:field xpath = "cusID"/>
+</xs:keyref>
+
+<xs:key name="issueKey">
+      <xs:selector xpath = "IssueStatus"/>
+      <xs:field xpath = "issueID "/>
+</xs:key>
+
+<xs:keyref name="EmpUpdatIssuStatFKey2" refer="issueKey">
+      <xs:selector xpath = "EmployeeUpdatesIssueStatus"/>
+      <xs:field xpath = "issueID"/>
+</xs:keyref>
+
+<xs:key name="returnKey">
+      <xs:selector xpath = "ReturnStatus"/>
+      <xs:field xpath = "returnID "/>
+</xs:key>
+
+<xs:keyref name="EmpUpdatReturnStatFKey2" refer="returnKey">
+      <xs:selector xpath = "EmployeeUpdatesReturnStatus"/>
+      <xs:field xpath = "returnID"/>
+</xs:keyref>
+
+</xs:element>
+
+<xs:complexType name="libraryType">
+    <xs:sequence>
+        <xs:element ref="branch" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Employee" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Devices" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Books" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="EmployeeRegistersCustomer" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="IssueStatus" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="EmployeeUpdatesIssueStatus" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="ReturnStatus" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="EmployeeUpdatesReturnStatus" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="Customer" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="branch">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="branchID" type="xs:integer"/>
+      <xs:element name="brName" type="xs:string"/>
+      <xs:element name="address" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Employee">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="empName" type="xs:string"/>
+      <xs:element name="Position" type="xs:string"/>
+      <xs:element name="Salary" type="xs:decimal"/>
+      <xs:element name="branchID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Devices">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="devID" type="xs:integer"/>
+      <xs:element name="devName" type="xs:string"/>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="Status" type="xs:string"/>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="cusID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Books">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="bookID" type="xs:integer"/>
+      <xs:element name="Title" type="xs:string"/>
+      <xs:element name="Author" type="xs:string"/>
+      <xs:element name="Publisher" type="xs:string"/>
+      <xs:element name="Genre" type="xs:string"/>
+      <xs:element name="bkStatus" type="xs:string"/>
+      <xs:element name="ISBN" type="xs:string"/>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="cusID" type="xs:integer"/>
+      <xs:element name="Rating" type="xs:integer"/>
+
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="EmployeeRegistersCustomer">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="cusID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="IssueStatus">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="issueID" type="xs:integer"/>
+      <xs:element name="bookISBN" type="xs:string"/>
+      <xs:element name="bookTitle" type="xs:string"/>
+      <xs:element name="customerID" type="xs:integer"/>
+      <xs:element name="issueDate" type="xs:string"/>
+      <xs:element name="deviceName" type="xs:string"/>
+      <xs:element name="deviceType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="EmployeeUpdatesIssueStatus">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="issueID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="ReturnStatus">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="returnID" type="xs:integer"/>
+      <xs:element name="bkISBN" type="xs:string"/>
+      <xs:element name="bkTitle" type="xs:string"/>
+      <xs:element name="custID" type="xs:integer"/>
+      <xs:element name="returnDate" type="xs:string"/>
+      <xs:element name="devicName" type="xs:string"/>
+      <xs:element name="devicType" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="EmployeeUpdatesReturnStatus">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="empID" type="xs:integer"/>
+      <xs:element name="returnID" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="Customer">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="cusID" type="xs:integer"/>
+      <xs:element name="cusName" type="xs:string"/>
+      <xs:element name="cusAddress" type="xs:string"/>
+      <xs:element name="RegistrationDate" type="xs:string"/>
+      <xs:element name="branchID" type="xs:integer"/>
+      <xs:element name="fineFee" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

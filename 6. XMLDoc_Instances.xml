@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="tableStructure.xsd"> 
+
+<branch>
+  <branchID>1</branchID>
+  <brName>Toronto Public Library</brName>
+  <address>350 Victoria Street, Toronto, ON</address>
+</branch>
+
+<Employee>
+  <empID>1</empID>
+  <empName>Mazen Bitar</empName>
+  <Position>Branch Manager</Position>
+  <Salary>60000.0</Salary>
+  <branchID>1</branchID>
+</Employee>
+
+<Employee>
+  <empID>2</empID>
+  <empName>Shireen Taha</empName>
+  <Position>Database Manager</Position>
+  <Salary>55000.0</Salary>
+  <branchID>1</branchID>
+</Employee>
+
+<Employee>
+  <empID>4</empID>
+  <empName>Annie Yang</empName>
+  <Position>Network Administrator</Position>
+  <Salary>60000.0</Salary>
+  <branchID>1</branchID>
+</Employee>
+
+<Employee>
+  <empID>5</empID>
+  <empName>Menan Parameswaran</empName>
+  <Position>Technical Services Manager</Position>
+  <Salary>70000.0</Salary>
+  <branchID>1</branchID>
+</Employee>
+
+<Employee>
+  <empID>6</empID>
+  <empName>Fatima Hasan</empName>
+  <Position>Library Technician</Position>
+  <Salary>48000.000000000000001</Salary>
+  <branchID>1</branchID>
+</Employee>
+
+<Devices>
+  <devID>2</devID>
+  <devName>Laptop</devName>
+  <Type>Acer</Type>
+  <Status>In Use</Status>
+  <empID>5</empID>
+  <cusID>1</cusID>
+</Devices>
+
+<Devices>
+  <devID>4</devID>
+  <devName>Tablet</devName>
+  <Type>Windows</Type>
+  <Status>In Use</Status>
+  <empID>5</empID>
+  <cusID>2</cusID>
+</Devices>
+
+<Devices>
+  <devID>7</devID>
+  <devName>Printer</devName>
+  <Type>HP</Type>
+  <Status>In Use</Status>
+  <empID>5</empID>
+  <cusID>4</cusID> 
+</Devices>
+
+<Devices>
+  <devID>9</devID>
+  <devName>TV</devName>
+  <Type>Samsung</Type>
+  <Status>In Use</Status>
+  <empID>5</empID>
+  <cusID>5</cusID>
+</Devices>
+
+<Devices>
+  <devID>13</devID>
+  <devName>Laptop</devName>
+  <Type>Acer</Type>
+  <Status>Returned</Status>
+  <empID>6</empID>
+  <cusID>1</cusID>
+</Devices>
+
+<Books>
+  <bookID>3</bookID>
+  <Title>The Ministry of Utmost Happiness</Title>
+  <Author>Arundhati Roy</Author>
+  <Publisher>Alfred Knopf</Publisher>
+  <Genre>Interpersonal Relations</Genre>
+  <bkStatus>Returned</bkStatus>
+  <ISBN>9781524733155</ISBN>
+  <empID>6</empID>
+  <cusID>3</cusID>
+  <Rating>1</Rating>
+</Books>
+
+<Books>
+  <bookID>4</bookID>
+  <Title>Killers of the Flower Moon</Title>
+  <Author>David Grann</Author>
+  <Publisher>Doubleday</Publisher>
+  <Genre>Crimes</Genre>
+  <bkStatus>Borrowed</bkStatus>
+  <ISBN>9780385534246</ISBN>
+  <empID>5</empID>
+  <cusID>1</cusID>
+  <Rating>2</Rating>
+</Books>
+
+<Books>
+  <bookID>6</bookID>
+  <Title>The Fault in Our Stars</Title>
+  <Author>John Green</Author>
+  <Publisher>Dutton Books</Publisher>
+  <Genre>Romance</Genre>
+  <bkStatus>Borrowed</bkStatus>
+  <ISBN>9780525478812</ISBN>
+  <empID>5</empID>
+  <cusID>2</cusID>
+  <Rating>4</Rating>
+</Books>
+
+<Books>
+  <bookID>7</bookID>
+  <Title>Divergent</Title>
+  <Author>Veronica Roth</Author>
+  <Publisher>Katherine Tegen Books</Publisher>
+  <Genre>Science Fiction</Genre>
+  <bkStatus>Returned</bkStatus>
+  <ISBN>9780062024039</ISBN>
+  <empID>6</empID>
+  <cusID>3</cusID>
+  <Rating>5</Rating>
+</Books>
+
+<Books>
+  <bookID>8</bookID>
+  <Title>City of Bones</Title>
+  <Author>Cassandra Clare</Author>
+  <Publisher>Margaret McElderry Books</Publisher>
+  <Genre>Science Fiction</Genre>
+  <bkStatus>Borrowed</bkStatus>
+  <ISBN>9781416914280</ISBN>
+  <empID>5</empID>
+  <cusID>4</cusID>
+  <Rating>3</Rating>
+</Books>
+
+<EmployeeRegistersCustomer>
+  <empID>2</empID>
+  <cusID>1</cusID>
+</EmployeeRegistersCustomer>
+
+<EmployeeRegistersCustomer>
+  <empID>2</empID>
+  <cusID>2</cusID>
+</EmployeeRegistersCustomer>
+
+<EmployeeRegistersCustomer>
+  <empID>2</empID>
+  <cusID>3</cusID>
+</EmployeeRegistersCustomer>
+
+<EmployeeRegistersCustomer>
+  <empID>2</empID>
+  <cusID>4</cusID>
+</EmployeeRegistersCustomer>
+
+<EmployeeRegistersCustomer>
+  <empID>2</empID>
+  <cusID>5</cusID>
+</EmployeeRegistersCustomer>
+
+<IssueStatus>
+  <issueID>1</issueID>
+  <bookISBN>97803855342466</bookISBN>
+  <bookTitle>Killers of the Flower Moon</bookTitle>
+  <customerID>1</customerID>
+  <issueDate>March</issueDate>
+  <deviceName>Not Applicable</deviceName>
+  <deviceType>Not Applicable</deviceType>
+</IssueStatus>
+
+<IssueStatus>
+  <issueID>2</issueID>
+  <bookISBN>9780525478812</bookISBN>
+  <bookTitle>The Fault in Our Stars</bookTitle>
+  <customerID>2</customerID>
+  <issueDate>March</issueDate>
+  <deviceName>Not Applicable</deviceName>
+  <deviceType>Not Applicable</deviceType>
+</IssueStatus>
+
+<IssueStatus>
+  <issueID>3</issueID>
+  <bookISBN>9781416914280</bookISBN>
+  <bookTitle>City of Bones</bookTitle>
+  <customerID>4</customerID>
+  <issueDate>March</issueDate>
+  <deviceName>Not Applicable</deviceName>
+  <deviceType>Not Applicable</deviceType>
+</IssueStatus>
+
+<IssueStatus>
+  <issueID>4</issueID>
+  <bookISBN>9781416914303</bookISBN>
+  <bookTitle>City of Glass</bookTitle>
+  <customerID>4</customerID>
+  <issueDate>March</issueDate>
+  <deviceName>Not Applicable</deviceName>
+  <deviceType>Not Applicable</deviceType>
+</IssueStatus>
+
+<IssueStatus>
+  <issueID>5</issueID>
+  <bookISBN>9781442468351</bookISBN>
+  <bookTitle>The Maze Runner</bookTitle>
+  <customerID>3</customerID>
+  <issueDate>April</issueDate>
+  <deviceName>Not Applicable</deviceName>
+  <deviceType>Not Applicable</deviceType>
+</IssueStatus>
+
+<EmployeeUpdatesIssueStatus>
+  <empID>5</empID>
+  <issueID>1</issueID>
+</EmployeeUpdatesIssueStatus>
+
+<EmployeeUpdatesIssueStatus>
+  <empID>5</empID>
+  <issueID>2</issueID>
+</EmployeeUpdatesIssueStatus>
+
+<EmployeeUpdatesIssueStatus>
+  <empID>5</empID>
+  <issueID>3</issueID>
+</EmployeeUpdatesIssueStatus>
+
+<EmployeeUpdatesIssueStatus>
+  <empID>5</empID>
+  <issueID>4</issueID>
+</EmployeeUpdatesIssueStatus>
+
+<EmployeeUpdatesIssueStatus>
+  <empID>5</empID>
+  <issueID>5</issueID>
+</EmployeeUpdatesIssueStatus>
+
+<ReturnStatus>
+  <returnID>2</returnID>
+  <bkISBN>9781524733155</bkISBN>
+  <bkTitle>The Ministry of Utmost Happiness</bkTitle>
+  <custID>3</custID>
+  <returnDate>April</returnDate>
+  <devicName>Not Applicable</devicName>
+  <devicType>Not Applicable</devicType>
+</ReturnStatus>
+
+<ReturnStatus>
+  <returnID>3</returnID>
+  <bkISBN>9780062024039</bkISBN>
+  <bkTitle>Divergent</bkTitle>
+  <custID>3</custID>
+  <returnDate>April</returnDate>
+  <devicName>Not Applicable</devicName>
+  <devicType>Not Applicable</devicType>
+</ReturnStatus>
+
+<ReturnStatus>
+  <returnID>4</returnID>
+  <bkISBN>9780061726835</bkISBN>
+  <bkTitle>Delirium</bkTitle>
+  <custID>9</custID>
+  <returnDate>April</returnDate>
+  <devicName>Not Applicable</devicName>
+  <devicType>Not Applicable</devicType>
+</ReturnStatus>
+
+<ReturnStatus>
+  <returnID>5</returnID>
+  <bkISBN>9780141310886</bkISBN>
+  <bkTitle>Speak</bkTitle>
+  <custID>7</custID>
+  <returnDate>April</returnDate>
+  <devicName>Not Applicable</devicName>
+  <devicType>Not Applicable</devicType>
+</ReturnStatus>
+
+<ReturnStatus>
+  <returnID>6</returnID>
+  <bkISBN>9780525423645</bkISBN>
+  <bkTitle>Matched</bkTitle>
+  <custID>6</custID>
+  <returnDate>April</returnDate>
+  <devicName>Not Applicable</devicName>
+  <devicType>Not Applicable</devicType>
+</ReturnStatus>
+
+<EmployeeUpdatesReturnStatus>
+  <empID>6</empID>
+  <returnID>2</returnID>
+</EmployeeUpdatesReturnStatus>
+
+<EmployeeUpdatesReturnStatus>
+  <empID>6</empID>
+  <returnID>3</returnID>
+</EmployeeUpdatesReturnStatus>
+
+<EmployeeUpdatesReturnStatus>
+  <empID>6</empID>
+  <returnID>4</returnID>
+</EmployeeUpdatesReturnStatus>
+
+<EmployeeUpdatesReturnStatus>
+  <empID>6</empID>
+  <returnID>5</returnID>
+</EmployeeUpdatesReturnStatus>
+
+<EmployeeUpdatesReturnStatus>
+  <empID>6</empID>
+  <returnID>6</returnID>
+</EmployeeUpdatesReturnStatus>
+
+<Customer>
+  <cusID>1</cusID>
+  <cusName>Peter Randall</cusName>
+  <cusAddress>500 Kingston Rd, Toronto, ON</cusAddress>
+  <RegistrationDate>January 1, 2018</RegistrationDate>
+  <branchID>1</branchID>
+  <fineFee>0.0</fineFee>
+</Customer>
+
+<Customer>
+  <cusID>2</cusID>
+  <cusName>Lailah Bradley</cusName>
+  <cusAddress>315 St Germain Ave, Toronto, ON</cusAddress>
+  <RegistrationDate>January 2, 2018</RegistrationDate>
+  <branchID>1</branchID>
+  <fineFee>1.0</fineFee>
+</Customer>
+
+<Customer>
+  <cusID>3</cusID>
+  <cusName>Sam Valencia</cusName>
+  <cusAddress>48 St Clair Ave, Toronto, ON</cusAddress>
+  <RegistrationDate>January 3, 2018</RegistrationDate>
+  <branchID>1</branchID>
+  <fineFee>2.0</fineFee>
+</Customer>
+
+<Customer>
+  <cusID>4</cusID>
+  <cusName>Terrance Sawyer</cusName>
+  <cusAddress>234 Willow Ave, Toronto, ON</cusAddress>
+  <RegistrationDate>January 4, 2018</RegistrationDate>
+  <branchID>1</branchID>
+  <fineFee>3.0</fineFee>
+</Customer>
+
+<Customer>
+  <cusID>5</cusID>
+  <cusName>Veronica Page</cusName>
+  <cusAddress>26 Goodwood Park, Toronto, ON</cusAddress>
+  <RegistrationDate>January 5, 2018</RegistrationDate>
+  <branchID>1</branchID>
+  <fineFee>4.0</fineFee>
+</Customer>
+
+</library>
